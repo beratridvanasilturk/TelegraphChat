@@ -1,11 +1,9 @@
 //
 //  WelcomeViewController.swift
-//  Flash Chat iOS13
+//  TelegraphChat
 //
-//  Created by Angela Yu on 21/10/2019.
-//  Copyright © 2019 Angela Yu. All rights reserved.
+//  Created by Berat Ridvan Asilturk 23/05/2023.
 //
-
 import UIKit
 
 class WelcomeViewController: UIViewController {
@@ -14,9 +12,17 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+ 
+        titleLabel.text = ""
+        var chracterIndex = 0.0
+        let titleText = "⚡️TelegraphChat"
+        for letter in titleText {
+            Timer.scheduledTimer(withTimeInterval: 0.5 * chracterIndex, repeats: false) { (timer) in
+                self.titleLabel.text?.append(letter)
+            }
+            chracterIndex += 1
+        }
        
     }
-    
-
 }
+        
