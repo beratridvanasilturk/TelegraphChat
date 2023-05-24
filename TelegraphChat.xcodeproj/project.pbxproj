@@ -15,6 +15,7 @@
 		0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62818E235DF01000E35CAF /* LoginViewController.swift */; };
 		0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B628190235DF01B00E35CAF /* ChatViewController.swift */; };
 		0B62819E235F0F4D00E35CAF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B62819D235F0F4D00E35CAF /* README.md */; };
+		58679E396606A10401481881 /* Pods_TelegraphChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A6152BCB55AF21F479B10A /* Pods_TelegraphChat.framework */; };
 		EA9B88502A1C2F4B00A9AACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9B884F2A1C2F4B00A9AACC /* Main.storyboard */; };
 		EAC483F42A1C2E5300443F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC483F22A1C2E5300443F13 /* LaunchScreen.storyboard */; };
 		EAD323EF2A1C28F50039D137 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAD323F12A1C28F50039D137 /* Info.plist */; };
@@ -30,9 +31,12 @@
 		0B62818E235DF01000E35CAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0B628190235DF01B00E35CAF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0B62819D235F0F4D00E35CAF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		26A6152BCB55AF21F479B10A /* Pods_TelegraphChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelegraphChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7799CFA7472EDB04B93972FD /* Pods-TelegraphChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelegraphChat.debug.xcconfig"; path = "Target Support Files/Pods-TelegraphChat/Pods-TelegraphChat.debug.xcconfig"; sourceTree = "<group>"; };
 		EA7B2A652A1C29BC0089C211 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Info.plist; sourceTree = "<group>"; };
 		EA9B884F2A1C2F4B00A9AACC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EAC483F32A1C2E5300443F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TelegraphChat/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		F101C4DD7E17D689983D59F6 /* Pods-TelegraphChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelegraphChat.release.xcconfig"; path = "Target Support Files/Pods-TelegraphChat/Pods-TelegraphChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58679E396606A10401481881 /* Pods_TelegraphChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 				0B62819D235F0F4D00E35CAF /* README.md */,
 				0B628175235DEE8100E35CAF /* TelegraphChat */,
 				0B628174235DEE8100E35CAF /* Products */,
+				1BA915DB6FA1B7568C698DD8 /* Pods */,
+				B2CC3B58C3B77764FBBD6107 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 0;
@@ -105,6 +112,24 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		1BA915DB6FA1B7568C698DD8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7799CFA7472EDB04B93972FD /* Pods-TelegraphChat.debug.xcconfig */,
+				F101C4DD7E17D689983D59F6 /* Pods-TelegraphChat.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B2CC3B58C3B77764FBBD6107 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26A6152BCB55AF21F479B10A /* Pods_TelegraphChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B628187235DEE8400E35CAF /* Build configuration list for PBXNativeTarget "TelegraphChat" */;
 			buildPhases = (
+				4A6C6E9FF04C19ECAFB86F23 /* [CP] Check Pods Manifest.lock */,
 				0B62816F235DEE8100E35CAF /* Sources */,
 				0B628170235DEE8100E35CAF /* Frameworks */,
 				0B628171235DEE8100E35CAF /* Resources */,
+				25CE6988BBCAEB1E37888392 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,6 +200,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25CE6988BBCAEB1E37888392 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TelegraphChat/Pods-TelegraphChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TelegraphChat/Pods-TelegraphChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TelegraphChat/Pods-TelegraphChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A6C6E9FF04C19ECAFB86F23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TelegraphChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0B62816F235DEE8100E35CAF /* Sources */ = {
@@ -330,6 +399,7 @@
 		};
 		0B628188235DEE8400E35CAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7799CFA7472EDB04B93972FD /* Pods-TelegraphChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -349,6 +419,7 @@
 		};
 		0B628189235DEE8400E35CAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F101C4DD7E17D689983D59F6 /* Pods-TelegraphChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
