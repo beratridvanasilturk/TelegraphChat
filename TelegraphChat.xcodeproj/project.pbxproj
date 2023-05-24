@@ -17,6 +17,7 @@
 		0B62819E235F0F4D00E35CAF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B62819D235F0F4D00E35CAF /* README.md */; };
 		58679E396606A10401481881 /* Pods_TelegraphChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A6152BCB55AF21F479B10A /* Pods_TelegraphChat.framework */; };
 		EA9B88502A1C2F4B00A9AACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9B884F2A1C2F4B00A9AACC /* Main.storyboard */; };
+		EAAD1C8B2A1ECC4600D91053 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAAD1C8A2A1ECC4600D91053 /* GoogleService-Info.plist */; };
 		EAC483F42A1C2E5300443F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC483F22A1C2E5300443F13 /* LaunchScreen.storyboard */; };
 		EAD323EF2A1C28F50039D137 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAD323F12A1C28F50039D137 /* Info.plist */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		7799CFA7472EDB04B93972FD /* Pods-TelegraphChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelegraphChat.debug.xcconfig"; path = "Target Support Files/Pods-TelegraphChat/Pods-TelegraphChat.debug.xcconfig"; sourceTree = "<group>"; };
 		EA7B2A652A1C29BC0089C211 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Info.plist; sourceTree = "<group>"; };
 		EA9B884F2A1C2F4B00A9AACC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EAAD1C8A2A1ECC4600D91053 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EAC483F32A1C2E5300443F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TelegraphChat/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		F101C4DD7E17D689983D59F6 /* Pods-TelegraphChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelegraphChat.release.xcconfig"; path = "Target Support Files/Pods-TelegraphChat/Pods-TelegraphChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 				0B628192235DF02000E35CAF /* Controllers */,
 				0B62817F235DEE8400E35CAF /* Assets.xcassets */,
 				EAD323F12A1C28F50039D137 /* Info.plist */,
+				EAAD1C8A2A1ECC4600D91053 /* GoogleService-Info.plist */,
 			);
 			path = TelegraphChat;
 			sourceTree = "<group>";
@@ -118,7 +121,6 @@
 				7799CFA7472EDB04B93972FD /* Pods-TelegraphChat.debug.xcconfig */,
 				F101C4DD7E17D689983D59F6 /* Pods-TelegraphChat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -141,7 +143,7 @@
 				0B62816F235DEE8100E35CAF /* Sources */,
 				0B628170235DEE8100E35CAF /* Frameworks */,
 				0B628171235DEE8100E35CAF /* Resources */,
-				25CE6988BBCAEB1E37888392 /* [CP] Embed Pods Frameworks */,
+				4462426F0D5FC5A9556F20A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,13 +198,14 @@
 				0B62819E235F0F4D00E35CAF /* README.md in Resources */,
 				EAD323EF2A1C28F50039D137 /* Info.plist in Resources */,
 				EAC483F42A1C2E5300443F13 /* LaunchScreen.storyboard in Resources */,
+				EAAD1C8B2A1ECC4600D91053 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		25CE6988BBCAEB1E37888392 /* [CP] Embed Pods Frameworks */ = {
+		4462426F0D5FC5A9556F20A2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
