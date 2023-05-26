@@ -6,15 +6,13 @@
 //
 
 import UIKit
-import FirebaseCore
-import FirebaseFirestore
-import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
+<<<<<<< HEAD
     
         
         @IBAction func registerPressed(_ sender: UIButton) {
@@ -31,5 +29,9 @@ class RegisterViewController: UIViewController {
             }
             ///firebase register butonu tetikleme kodu, Password authentication icin.
         }
+=======
+    @IBAction func registerPressed(_ sender: UIButton) {
+>>>>>>> parent of 73296b0... Password Authentication Prepared
     }
+    
 }

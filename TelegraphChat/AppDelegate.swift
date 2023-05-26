@@ -7,9 +7,7 @@
 
 import UIKit
 import FirebaseCore
-import FirebaseFirestore
-import FirebaseAuth
-//Firebaseleri ice aktarilir
+//Firebase ice aktarilir
 
 @UIApplicationMain
 

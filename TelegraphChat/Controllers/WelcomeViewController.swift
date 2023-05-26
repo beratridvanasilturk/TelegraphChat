@@ -17,7 +17,7 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
 
         titleLabel.text = "⚡️TelegraphChat"
-//        
+        
 //        titleLabel.text = ""
 //        var chracterIndex = 0.0
 //        let titleText = "⚡️TelegraphChat"

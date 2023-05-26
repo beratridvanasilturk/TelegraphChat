@@ -373,10 +373,12 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="y7D-jv-BlJ"/>
+        <designable name="y7D-jv-BlJ">
+            <size key="intrinsicContentSize" width="257.5" height="36"/>
+        </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="dX3-7K-OUG"/>
+        <segue reference="GN7-ac-Wrs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
