@@ -6,32 +6,30 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
-<<<<<<< HEAD
-    
         
         @IBAction func registerPressed(_ sender: UIButton) {
             
             if let email = emailTextfield.text, let password = passwordTextfield.text {
-            Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
                 guard let strongSelf = self else { return }
+                ///Authentication'un kullanici olusturma kod satiri
                 if let e = error {
                     print(e.localizedDescription)
                 } else {
-                    /// Else ise ChatViewController'a git komutu :
+                    /// Bir error yok ise ChatViewController'a git komutunu segue'nin identifier'i ile gerceklestirir :
                     self!.performSegue(withIdentifier: "RegisterToChat", sender: self)
                 }
             }
-            ///firebase register butonu tetikleme kodu, Password authentication icin.
+            ///Password authentication icin firebase register "kayit ol" butonu tetikleme kodu.
         }
-=======
-    @IBAction func registerPressed(_ sender: UIButton) {
->>>>>>> parent of 73296b0... Password Authentication Prepared
     }
-    
 }
