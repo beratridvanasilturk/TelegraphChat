@@ -20,6 +20,7 @@
 		EAAD1C8B2A1ECC4600D91053 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAAD1C8A2A1ECC4600D91053 /* GoogleService-Info.plist */; };
 		EAC483F42A1C2E5300443F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC483F22A1C2E5300443F13 /* LaunchScreen.storyboard */; };
 		EAD323EF2A1C28F50039D137 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAD323F12A1C28F50039D137 /* Info.plist */; };
+		EAEB19762A20FC8F005CC535 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB19752A20FC8F005CC535 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		EA9B884F2A1C2F4B00A9AACC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EAAD1C8A2A1ECC4600D91053 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EAC483F32A1C2E5300443F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TelegraphChat/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		EAEB19752A20FC8F005CC535 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F101C4DD7E17D689983D59F6 /* Pods-TelegraphChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelegraphChat.release.xcconfig"; path = "Target Support Files/Pods-TelegraphChat/Pods-TelegraphChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 				0B628193235DF03400E35CAF /* Views */,
 				0B628192235DF02000E35CAF /* Controllers */,
 				0B62817F235DEE8400E35CAF /* Assets.xcassets */,
+				EAEB19752A20FC8F005CC535 /* Constants.swift */,
 				EAD323F12A1C28F50039D137 /* Info.plist */,
 				EAAD1C8A2A1ECC4600D91053 /* GoogleService-Info.plist */,
 			);
@@ -253,6 +256,7 @@
 			files = (
 				0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */,
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
+				EAEB19762A20FC8F005CC535 /* Constants.swift in Sources */,
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
 				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
 				0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */,

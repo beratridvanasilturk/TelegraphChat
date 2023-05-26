@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
                     print(e.localizedDescription)
                 } else {
                     /// Bir error yok ise ChatViewController'a git komutunu segue'nin identifier'i ile gerceklestirir :
-                    self!.performSegue(withIdentifier: "LoginToChat", sender: self)
+                    self!.performSegue(withIdentifier: Constants.loginSegue, sender: self)
                 }
             }
         }

@@ -26,7 +26,7 @@ class RegisterViewController: UIViewController {
                     print(e.localizedDescription)
                 } else {
                     /// Bir error yok ise ChatViewController'a git komutunu segue'nin identifier'i ile gerceklestirir :
-                    self!.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                    self!.performSegue(withIdentifier: Constants.registerSegue, sender: self)
                 }
             }
             ///Password authentication icin firebase register "kayit ol" butonu tetikleme kodu.
