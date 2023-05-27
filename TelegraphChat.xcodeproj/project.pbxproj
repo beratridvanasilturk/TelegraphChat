@@ -17,6 +17,8 @@
 		0B62819E235F0F4D00E35CAF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B62819D235F0F4D00E35CAF /* README.md */; };
 		58679E396606A10401481881 /* Pods_TelegraphChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26A6152BCB55AF21F479B10A /* Pods_TelegraphChat.framework */; };
 		EA4B258B2A216E0B0071763D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4B258A2A216E0B0071763D /* Message.swift */; };
+		EA6678492A22955B00B734F4 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6678472A22955B00B734F4 /* MessageCell.swift */; };
+		EA66784A2A22955B00B734F4 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6678482A22955B00B734F4 /* MessageCell.xib */; };
 		EA9B88502A1C2F4B00A9AACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA9B884F2A1C2F4B00A9AACC /* Main.storyboard */; };
 		EAAD1C8B2A1ECC4600D91053 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EAAD1C8A2A1ECC4600D91053 /* GoogleService-Info.plist */; };
 		EAC483F42A1C2E5300443F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAC483F22A1C2E5300443F13 /* LaunchScreen.storyboard */; };
@@ -37,6 +39,8 @@
 		26A6152BCB55AF21F479B10A /* Pods_TelegraphChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TelegraphChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7799CFA7472EDB04B93972FD /* Pods-TelegraphChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TelegraphChat.debug.xcconfig"; path = "Target Support Files/Pods-TelegraphChat/Pods-TelegraphChat.debug.xcconfig"; sourceTree = "<group>"; };
 		EA4B258A2A216E0B0071763D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = TelegraphChat/Controllers/Message.swift; sourceTree = SOURCE_ROOT; };
+		EA6678472A22955B00B734F4 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		EA6678482A22955B00B734F4 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		EA7B2A652A1C29BC0089C211 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Info.plist; sourceTree = "<group>"; };
 		EA9B884F2A1C2F4B00A9AACC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EAAD1C8A2A1ECC4600D91053 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 			children = (
 				EA9B884F2A1C2F4B00A9AACC /* Main.storyboard */,
 				EAC483F22A1C2E5300443F13 /* LaunchScreen.storyboard */,
+				EA6678472A22955B00B734F4 /* MessageCell.swift */,
+				EA6678482A22955B00B734F4 /* MessageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 				0B62819E235F0F4D00E35CAF /* README.md in Resources */,
 				EAD323EF2A1C28F50039D137 /* Info.plist in Resources */,
 				EAC483F42A1C2E5300443F13 /* LaunchScreen.storyboard in Resources */,
+				EA66784A2A22955B00B734F4 /* MessageCell.xib in Resources */,
 				EAAD1C8B2A1ECC4600D91053 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +272,7 @@
 				EA4B258B2A216E0B0071763D /* Message.swift in Sources */,
 				0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */,
 				0B62818D235DF00B00E35CAF /* RegisterViewController.swift in Sources */,
+				EA6678492A22955B00B734F4 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

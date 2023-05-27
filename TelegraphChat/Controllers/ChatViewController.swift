@@ -35,6 +35,8 @@ class ChatViewController: UIViewController {
         ///Login olduktan sonra log out butonuyla cikis yapilabilecegi icin back butonunu bu ekranda islevsiz kalir ve bu kod ile back butonu devre disi birakilir
         title = Constants.appName
         
+        tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
+        
 
     }
     
@@ -65,9 +67,9 @@ extension ChatViewController: UITableViewDataSource {
     ///Mesajlasma kadar table view row olusturur
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath)
-        cell.textLabel?.text = messages[indexPath.row].body
-        /// sirasiyla mesajlari texte atar
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
+        cell.label.text = messages[indexPath.row].body
+        /// sirasiyla mesajlari texteki label etiketine atar
         return cell
     }
     
