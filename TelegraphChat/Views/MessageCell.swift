@@ -15,7 +15,9 @@ class MessageCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        messageBuble.layer.cornerRadius = messageBuble.frame.size.height / 10
+        ///Messaj buble metnini cerceve uzunluguna gore kosesi trim edilir, radius eklenir
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

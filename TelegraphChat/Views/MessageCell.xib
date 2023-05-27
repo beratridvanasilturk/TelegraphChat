@@ -11,20 +11,20 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="68" id="KGk-i7-Jjw" customClass="MessageCell" customModule="TelegraphChat" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="346" height="68"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="102" id="KGk-i7-Jjw" customClass="MessageCell" customModule="TelegraphChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="346" height="102"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="346" height="68"/>
+                <rect key="frame" x="0.0" y="0.0" width="346" height="102"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wMJ-zA-nQb">
-                        <rect key="frame" x="10" y="10" width="326" height="50"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wMJ-zA-nQb">
+                        <rect key="frame" x="10" y="10" width="326" height="82"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ut-xW-xf9">
                                 <rect key="frame" x="0.0" y="0.0" width="266" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sat-4k-w8X">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sat-4k-w8X">
                                         <rect key="frame" x="10" y="10" width="246" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="BrandLightPurple"/>
@@ -40,7 +40,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="7gB-pd-6Kg">
-                                <rect key="frame" x="286" y="0.0" width="40" height="50"/>
+                                <rect key="frame" x="286" y="0.0" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="FGH-R4-1Li"/>
                                     <constraint firstAttribute="height" constant="40" id="p6D-hK-7vk"/>
@@ -62,7 +62,7 @@
                 <outlet property="messageBuble" destination="6ut-xW-xf9" id="TZK-yC-i0a"/>
                 <outlet property="rightImageView" destination="7gB-pd-6Kg" id="JW8-Ac-32i"/>
             </connections>
-            <point key="canvasLocation" x="302.29007633587787" y="-43.661971830985919"/>
+            <point key="canvasLocation" x="302.29007633587787" y="-31.690140845070424"/>
         </tableViewCell>
     </objects>
     <resources>
