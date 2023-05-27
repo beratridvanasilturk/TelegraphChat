@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         //Firebase baglamasi gerceklesmis olur.
+        
         return true
     }
 
