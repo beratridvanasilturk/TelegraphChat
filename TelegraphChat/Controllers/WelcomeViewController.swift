@@ -27,7 +27,7 @@ class WelcomeViewController: UIViewController {
 //            }
 //            chracterIndex += 1
 //        }
-        ///Text'i normal bicimde herhangi bir pos kullanmadan animasyon haline getirir, ve bunu her bir harf icin ayni anda yapmasini engellemek adina da chracterIndex tanimladik .
+        ///Text'i normal bicimde herhangi bir pod kullanmadan animasyon haline getirir, ve bunu her bir harf icin ayni anda yapmasini engellemek adina da chracterIndex tanimladik .
        
     }
 }

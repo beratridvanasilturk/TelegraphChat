@@ -5,7 +5,7 @@
 //  Created by Berat Rıdvan Asiltürk on 26.05.2023.
 //
 
-///Herhangi bir yazim hatasi ile crashi engellemek adina stringleri constanta cevirdik.
+///Herhangi bir yazim hatasi ile crashi engellemek adina tum var olan stringleri kodlarimizda kullanmak adina constant sinifina cevirdik.
 struct Constants {
     
     static let appName = "✉️TelegraphChat"

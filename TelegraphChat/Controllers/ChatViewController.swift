@@ -29,8 +29,6 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = self
-        //
-        
         navigationItem.hidesBackButton = true
         ///Login olduktan sonra log out butonuyla cikis yapilabilecegi icin back butonunu bu ekranda islevsiz kalir ve bu kod ile back butonu devre disi birakilir
         title = Constants.appName
@@ -47,7 +45,7 @@ class ChatViewController: UIViewController {
           try Auth.auth().signOut()
             
             navigationController?.popToRootViewController(animated: true)
-            ///Sign out basarili oldugunda giris olan kok root ekrana doner
+            ///Sign out basarili oldugunda giris olan kok root ekrana doner, ki bu da bizim karsilama ekranimizdir.
         } catch let signOutError as NSError {
           print("Error signing out: %@", signOutError)
         }
@@ -64,12 +62,12 @@ extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
-    ///Mesajlasma kadar table view row olusturur
+    ///Mesajlasma kadar table view row'u olusturur
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
         cell.label.text = messages[indexPath.row].body
-        /// sirasiyla mesajlari texteki label etiketine atar
+        /// Sirasiyla mesajlari text'teki label etiketine atar
         return cell
     }
     
