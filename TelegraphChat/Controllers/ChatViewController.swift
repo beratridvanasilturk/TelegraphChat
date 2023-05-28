@@ -11,20 +11,13 @@ import FirebaseFirestore
 import FirebaseAuth
 
 class ChatViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
     
     let dataBase = Firestore.firestore()
     
-    var messages: [Message] = [
-        Message(sender: "Deneme1@mail.com", body: "Hey"),
-        Message(sender: "Deneme2@mail.com", body: "Hey man!"),
-        Message(sender: "Deneme1@mail.com", body: "What's up mate?"),
-        Message(sender: "Deneme2@mail.com", body: "Everthing's perfect bro where are you?"),
-        Message(sender: "Deneme1@mail.com", body: "Umm... I don't know i just see a huge shark"),
-        Message(sender: "Deneme2@mail.com", body: "What? a Shark? Ahh you are joking me..")
-    ]
+    var messages: [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +29,38 @@ class ChatViewController: UIViewController {
         
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         
-
+        loadMessages()
+        
+        
+    }
+    
+    func loadMessages() {
+        messages = []
+        dataBase.collection(Constants.FStore.collectionName).getDocuments { (querySnapshot, error) in
+            if let e = error {
+                print("Some problem has getting data from Firestore \(e)")
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for document in snapshotDocuments {
+                        let data = document.data()
+                        if let messageSender = data[Constants.FStore.senderField] as? String,
+                           let messageBody = data[Constants.FStore.bodyField] as? String {
+                            
+                            let newMessage = Message(sender: messageSender, body: messageBody)
+                            self.messages.append(newMessage)
+                            
+                            /// RETRIVING DATA FROM FIRESTORE
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                            //UI'in kullanimini engellemeden, queue'yi etkilemeden asyncron sekilde main'de data guncellemesi yapariz.
+                            
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
@@ -70,6 +94,7 @@ class ChatViewController: UIViewController {
 }
 
 extension ChatViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
