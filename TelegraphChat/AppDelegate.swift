@@ -10,6 +10,8 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 //Firebaseleri ice aktarilir
+import IQKeyboardManagerSwift
+//
 
 @UIApplicationMain
 
@@ -21,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         //Firebase baglamasi gerceklesmis olur.
+        IQKeyboardManager.shared.enable = true
+        //IqKeyboardManager third party ile gelen bir kod satiridir, kisaca IKM; keyboard'in ui'da daha iyi bir kullanici deneyimi sunar
         
         return true
     }
