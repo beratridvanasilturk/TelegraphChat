@@ -38,9 +38,12 @@ class ChatViewController: UIViewController {
 
 ///        dataBase.collection(Constants.FStore.collectionName).getDocuments { (querySnapshot, error) in
         ///.getDocuments: For get data once
-        dataBase.collection(Constants.FStore.collectionName).addSnapshotListener { (querySnapshot, error) in
+        dataBase.collection(Constants.FStore.collectionName)
+            .order(by: Constants.FStore.dateField)
+        ///.order(by: String) ise yuklenecek olan mesaji neye gore ui'da siralamak istiyorsan ona gore duzenlersin, bizim kodumuzda mesajlar tarihe gore siralanmistir. Boylelikle son gonderilen mesaj ui table view'de en altta gorunecektir.
+            .addSnapshotListener { (querySnapshot, error) in
                 ///.addSnapshotListener: For realtime getting data
-            
+               
             self.messages = []
             ///41. satirdaki Collection'a yeni bir item eklendiginde bu bos olan messages array'imize 57.satirdaki yeni mesajimiz eklenmis olur.
             
@@ -87,7 +90,9 @@ class ChatViewController: UIViewController {
     @IBAction func sendPressed(_ sender: UIButton) {
         
         if let messageBody = messageTextfield.text, let messageSender =  Auth.auth().currentUser?.email {
-            dataBase.collection(Constants.FStore.collectionName).addDocument(data: [Constants.FStore.senderField: messageSender, Constants.FStore.bodyField: messageBody]) { (error) in
+            dataBase.collection(Constants.FStore.collectionName).addDocument(data: [ Constants.FStore.senderField: messageSender,
+                Constants.FStore.bodyField: messageBody,
+                Constants.FStore.dateField: Date().timeIntervalSince1970    ]) { (error) in
                 if let e = error {
                     print("Some issues with about saving data to firestore. \(e)")
                 } else {
