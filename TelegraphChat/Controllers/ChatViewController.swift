@@ -35,9 +35,16 @@ class ChatViewController: UIViewController {
     }
     
     func loadMessages() {
-        messages = []
-        dataBase.collection(Constants.FStore.collectionName).getDocuments { (querySnapshot, error) in
-            if let e = error {
+
+///        dataBase.collection(Constants.FStore.collectionName).getDocuments { (querySnapshot, error) in
+        ///.getDocuments: For get data once
+        dataBase.collection(Constants.FStore.collectionName).addSnapshotListener { (querySnapshot, error) in
+                ///.addSnapshotListener: For realtime getting data
+            
+            self.messages = []
+            ///41. satirdaki Collection'a yeni bir item eklendiginde bu bos olan messages array'imize 57.satirdaki yeni mesajimiz eklenmis olur.
+            
+                if let e = error {
                 print("Some problem has getting data from Firestore \(e)")
             } else {
                 if let snapshotDocuments = querySnapshot?.documents {
