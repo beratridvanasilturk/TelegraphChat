@@ -63,6 +63,8 @@ class ChatViewController: UIViewController {
                             
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                             }
                             //UI'in kullanimini engellemeden, queue'yi etkilemeden asyncron sekilde main'de data guncellemesi yapariz.
                             
@@ -97,6 +99,12 @@ class ChatViewController: UIViewController {
                     print("Some issues with about saving data to firestore. \(e)")
                 } else {
                     print("Succesfully data saved.")
+                    
+                    DispatchQueue.main.async {
+                        self.messageTextfield.text = ""
+                    }
+                    ///Mesaj gonderildikten sonra textfield'i sifirlar
+                 
                 }
             }
         }
@@ -113,9 +121,33 @@ extension ChatViewController: UITableViewDataSource {
     ///Mesajlasma kadar table view row'u olusturur
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let message = messages[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
-        cell.label.text = messages[indexPath.row].body
+        cell.label.text = message.body
         /// Sirasiyla mesajlari text'teki label etiketine atar
+        
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            
+            cell.messageBuble.backgroundColor = UIColor(named: Constants.BrandColors.lightPurple)
+            cell.label.textColor = UIColor(named: Constants.BrandColors.purple)
+            
+            // Bu if kod satiri o anki kullanicinin mesajidir
+        } else {
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            
+            cell.messageBuble.backgroundColor = UIColor(named: Constants.BrandColors.lightPurple)
+            cell.label.textColor = UIColor(named: Constants.BrandColors.purple)
+            
+            
+        } // Bu else kod satiri diger kullanicinin mesajidir
+        
+        
+     
         return cell
     }
     

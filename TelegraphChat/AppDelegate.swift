@@ -25,7 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Firebase baglamasi gerceklesmis olur.
         IQKeyboardManager.shared.enable = true
         //IqKeyboardManager third party ile gelen bir kod satiridir, kisaca IKM; keyboard'in ui'da daha iyi bir kullanici deneyimi sunar
-        
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        ///Toolbar'i kapatarak ui'da alan kazanmamizi saglar
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        /// UI'da keyboard disinda bir yere tiklandiginda keyboard'i gizlemeye yarar
+    
         return true
     }
 
