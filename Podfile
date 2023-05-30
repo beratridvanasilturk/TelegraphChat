@@ -1,5 +1,5 @@
 
-platform :ios, '13.0'
+platform :ios, '9.0'
 
 target 'TelegraphChat' do
   use_frameworks!
